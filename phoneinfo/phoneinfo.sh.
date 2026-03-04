@@ -1,0 +1,38 @@
+#!/bin/bash
+# PhoneInfo Pro v2.0 - Created by Aarif Saifi
+
+# Colors for professional look
+G='\033[1;32m' # Green
+R='\033[1;31m' # Red
+Y='\033[1;33m' # Yellow
+C='\033[1;36m' # Cyan
+B='\033[1;34m' # Blue
+W='\033[1;37m' # White
+
+clear
+echo -e "${C}===================================================="
+echo -e "${G}          PHONEINFO PRO v2.0 - OFFICIAL"
+echo -e "${Y}          Developer: Aarif Saifi (kinh17631)"
+echo -e "${C}===================================================="
+echo -e "${W}  [+] Fetching Device Details... Please Wait..."
+sleep 2
+
+echo -e "\n${B}[ SYSTEM INFORMATION ]${W}"
+echo -e "----------------------------------------------------"
+echo -e "${G}Model: ${W}$(getprop ro.product.model)"
+echo -e "${G}Manufacturer: ${W}$(getprop ro.product.manufacturer)"
+echo -e "${G}Android Version: ${W}$(getprop ro.build.version.release)"
+echo -e "${G}Kernel Architecture: ${W}$(uname -m)"
+
+echo -e "\n${B}[ NETWORK DETAILS ]${W}"
+echo -e "----------------------------------------------------"
+echo -e "${G}Internal IP: ${W}$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}')"
+echo -e "${G}User Agent: ${W}$HTTP_USER_AGENT"
+
+echo -e "\n${B}[ BATTERY STATUS ]${W}"
+echo -e "----------------------------------------------------"
+termux-battery-status 2>/dev/null | grep -E "percentage|status|health" || echo -e "${R}Install 'termux-api' for battery details.${W}"
+
+echo -e "\n${C}===================================================="
+echo -e "${G}       Audit Completed Successfully! 🚀"
+echo -e "${C}===================================================="
