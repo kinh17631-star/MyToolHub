@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhoneInfo Pro | MyToolHub</title>
+    <title>PhoneInfo Pro | Official</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --bg: #0b0e14; --card: #151b23; --accent: #2f81f7; --text: #adbac7; }
-        body { background: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; padding: 20px; text-align: center; }
-        .container { max-width: 600px; margin: 50px auto; background: var(--card); border: 1px solid #444c56; border-radius: 15px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h1 { color: #f0f6fc; font-size: 2rem; }
-        p { color: #8b949e; line-height: 1.6; }
-        .features { text-align: left; margin: 20px 0; padding-left: 20px; }
-        .features li { margin-bottom: 10px; color: #adbac7; }
-        .btn-get { background: #238636; color: white; padding: 15px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: block; margin-top: 30px; transition: 0.3s; }
-        .btn-get:hover { background: #2ea043; }
+        :root { --bg: #0d1117; --card: #161b22; --accent: #2f81f7; --text: #c9d1d9; }
+        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
+        header { padding: 80px 20px; background: radial-gradient(circle, #1c2128, #0d1117); border-bottom: 1px solid #30363d; }
+        .container { max-width: 800px; margin: auto; padding: 60px 20px; }
+        .details-box { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 25px; margin-bottom: 20px; text-align: left; }
+        .btn-verify { background: var(--accent); color: white; padding: 18px 40px; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 30px; }
     </style>
 </head>
 <body>
+    <header>
+        <h1 style="color:white; font-size: 2.5rem;" data-aos="fade-down">PhoneInfo Pro</h1>
+        <p data-aos="fade-up">Professional System Auditor for Terminal</p>
+    </header>
 
     <div class="container">
-        <h1>📱 PhoneInfo Pro</h1>
-        <p>A powerful terminal-based script to gather deep system and network information of any device.</p>
-        
-        <ul class="features">
-            <li>✅ Detailed Hardware Info</li>
-            <li>✅ Network & IP Analysis</li>
-            <li>✅ Battery & System Health</li>
-            <li>✅ Fast & Lightweight</li>
-        </ul>
+        <div class="details-box" data-aos="fade-right">
+            <h2 style="color:white;">About the Tool</h2>
+            <p>PhoneInfo Pro extracts hardware information, network details, and security metrics directly from your terminal environment.</p>
+        </div>
 
-        <a href="verify.html" class="btn-get">Get Installation Commands</a>
+        <div class="details-box" data-aos="fade-left">
+            <h2 style="color:white;">Features</h2>
+            <ul style="color:#8b949e; line-height:2;">
+                <li>Full Hardware Architecture Audit</li>
+                <li>Real-time Battery Health Monitoring</li>
+                <li>Public and Local IP Tracking</li>
+            </ul>
+        </div>
+
+        <a href="verify.html" class="btn-verify" data-aos="zoom-in">Get Installation Commands</a>
     </div>
 
-    <footer style="margin-top: 40px; font-size: 0.8rem; color: #444c56;">
-        Developed by Aarif Saifi | Protected by MyToolHub
-    </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
