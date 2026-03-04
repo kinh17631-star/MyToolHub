@@ -1,90 +1,37 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyToolHub - Aarif Saifi Official</title>
-    <meta name="description" content="Download best Termux and iSH tools from MyToolHub by Aarif Saifi.">
-    <meta name="keywords" content="MyToolHub, Aarif Saifi, Termux Tools, iSH Shell Tools, PhoneInfo Tool">
-    
+    <title>Aarif Saifi | MyToolHub</title>
     <style>
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            border: 1px solid #30363d;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #161b22;
-        }
-        h1 { color: #58a6ff; }
-        h2 { color: #3fb950; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
-        p { font-size: 1.1em; }
-        .tool-box {
-            background: #0d1117;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            text-align: left;
-            border-left: 5px solid #d29922;
-        }
-        code {
-            background: #21262d;
-            padding: 5px 10px;
-            color: #ffa657;
-            display: block;
-            margin-top: 10px;
-            word-break: break-all;
-        }
-        .copy-btn {
-            background-color: #238636;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        .copy-btn:hover { background-color: #2ea043; }
-        footer { margin-top: 30px; font-size: 0.8em; color: #8b949e; }
+        :root { --bg: #0a0b10; --card: #151921; --accent: #3b82f6; --text: #ffffff; }
+        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; text-align: center; }
+        nav { padding: 20px; background: rgba(0,0,0,0.5); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
+        .hero { padding: 80px 20px; background: linear-gradient(to bottom, #1e293b, var(--bg)); }
+        h1 { font-size: 3rem; margin: 0; color: var(--accent); text-transform: uppercase; letter-spacing: 5px; }
+        .tool-card { background: var(--card); border: 1px solid #333; border-radius: 15px; padding: 30px; margin: 20px auto; max-width: 400px; transition: 0.3s; }
+        .tool-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .btn { background: var(--accent); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem; }
+        footer { margin-top: 50px; padding: 20px; font-size: 0.8rem; color: #888; }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <h1>🚀 MyToolHub</h1>
-    <p>Aarif Saifi Official Terminal Tool Repository</p>
-
-    <div class="tool-box">
-        <h2>🛠️ Part-2: System Info Tool (Neofetch)</h2>
-        <p>Is tool ko apne Termux ya iSH Shell mein run karne ke liye niche di gayi command copy karein:</p>
-        <code id="toolCode">git clone https://github.com/dylanaraps/neofetch && cd neofetch && chmod +x neofetch && ./neofetch</code>
-        <button class="copy-btn" onclick="copyCommand()">Click to Copy Command</button>
+    <nav> <div style="font-weight: bold; font-size: 1.5rem;">Aarif<span style="color:var(--accent)">Saifi</span></div> </nav>
+    <div class="hero">
+        <h1>MyToolHub</h1>
+        <p>Professional Shell & Python Tool Developer</p>
     </div>
-
-    <p>Baaki tools aur tutorials ke liye stay tuned! Part-3 jald aa raha hai...</p>
-</div>
-
-<footer>
-    © 2026 MyToolHub | Created by Aarif Saifi
-</footer>
-
-<script>
-    function copyCommand() {
-        var text = document.getElementById("toolCode").innerText;
-        navigator.clipboard.writeText(text).then(function() {
-            alert("Command Copy Ho Gayi Hai! Ab Terminal mein paste karein.");
-        });
-    }
-</script>
-
+    <section>
+        <div class="tool-card">
+            <h2 style="margin-top:0">📱 PhoneInfo Pro</h2>
+            <p>Get real-time device info with one command.</p>
+            <button class="btn" onclick="goToVerify()">Get Commands</button>
+        </div>
+    </section>
+    <footer>© 2026 Aarif Saifi | Open Source Projects</footer>
+    <script>
+        function goToVerify() { window.location.href = "verify.html"; }
+    </script>
 </body>
 </html>
