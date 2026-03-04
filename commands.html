@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneInfo Commands | Aarif Saifi</title>
+    <style>
+        :root { --bg: #0a0b10; --accent: #3b82f6; --terminal: #151921; }
+        body { background: var(--bg); color: white; font-family: 'Courier New', monospace; text-align: center; padding: 20px; }
+        .container { max-width: 600px; margin: 50px auto; background: var(--terminal); border-radius: 10px; border: 1px solid #333; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .header { display: flex; gap: 8px; margin-bottom: 15px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+        .code-box { background: #000; color: #00ff00; padding: 15px; border-radius: 5px; text-align: left; overflow-x: auto; font-size: 0.9rem; position: relative; }
+        .copy-btn { margin-top: 20px; background: var(--accent); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .copy-btn:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="dot red"></div> <div class="dot yellow"></div> <div class="dot green"></div>
+        </div>
+        <h2>📱 PhoneInfo Installation</h2>
+        <p style="color: #888;">Copy and paste the commands below in your terminal (iSH/Termux):</p>
+        
+        <div class="code-box" id="cmd">
+            pkg update && pkg upgrade -y <br>
+            pkg install git -y <br>
+            git clone https://github.com/kinh17631-star/MyToolHub <br>
+            cd MyToolHub/phoneinfo <br>
+            bash phoneinfo.sh
+        </div>
+
+        <button class="copy-btn" onclick="copyCode()">Copy Commands</button>
+    </div>
+
+    <script>
+        function copyCode() {
+            const code = `pkg update && pkg upgrade -y && pkg install git -y && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/phoneinfo && bash phoneinfo.sh`;
+            navigator.clipboard.writeText(code);
+            alert("Commands Copied to Clipboard! Now paste in Terminal.");
+        }
+    </script>
+
+</body>
+</html>
