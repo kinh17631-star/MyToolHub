@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Verify to Continue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Verification</title>
     <style>
-        body { background: #0b0e14; color: white; text-align: center; padding-top: 50px; font-family: sans-serif; }
-        #timer { font-size: 80px; color: #2f81f7; font-weight: bold; }
-        .ad-space { width: 300px; height: 250px; background: #1c2128; border: 1px dashed #444; margin: 20px auto; display: flex; align-items: center; justify-content: center; color: #666; }
-        #next-btn { display: none; background: #238636; color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+        body { background: #0d1117; color: #c9d1d9; font-family: sans-serif; text-align: center; padding-top: 50px; }
+        #timer { font-size: 80px; color: #2f81f7; font-weight: bold; margin: 30px; }
+        .ad-box { width: 300px; height: 250px; background: #161b22; border: 1px dashed #30363d; margin: 20px auto; display: flex; align-items: center; justify-content: center; color: #484f58; }
+        .btn-go { display: none; background: #238636; color: white; padding: 15px 40px; border-radius: 6px; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h3>Checking Security... Please Wait</h3>
-    <div class="ad-space">AD SPACE (Paisa Yahan Milega)</div>
+    <h3>Generating Your Secure Link...</h3>
+    <div class="ad-box">AD SLOT 1</div>
     <div id="timer">10</div>
-    <a href="commands.html" id="next-btn">Get Commands</a>
+    <div class="ad-box">AD SLOT 2</div>
+    <a href="commands.html" id="btn-go" class="btn-go">CONTINUE TO COMMANDS</a>
 
     <script>
         let t = 10;
-        let timer = setInterval(() => {
+        let x = setInterval(() => {
             t--;
             document.getElementById('timer').innerText = t;
             if(t <= 0) {
-                clearInterval(timer);
+                clearInterval(x);
                 document.getElementById('timer').style.display = 'none';
-                document.getElementById('next-btn').style.display = 'inline-block';
+                document.getElementById('btn-go').style.display = 'inline-block';
             }
         }, 1000);
     </script>
