@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarif Saifi | MyToolHub</title>
+    <title>PhoneInfo Pro | MyToolHub</title>
     <style>
-        :root { --bg: #0a0b10; --card: #151921; --accent: #3b82f6; --text: #ffffff; }
-        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; text-align: center; }
-        nav { padding: 20px; background: rgba(0,0,0,0.5); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
-        .hero { padding: 80px 20px; background: linear-gradient(to bottom, #1e293b, var(--bg)); }
-        h1 { font-size: 3rem; margin: 0; color: var(--accent); text-transform: uppercase; letter-spacing: 5px; }
-        .tool-card { background: var(--card); border: 1px solid #333; border-radius: 15px; padding: 30px; margin: 20px auto; max-width: 400px; transition: 0.3s; }
-        .tool-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .btn { background: var(--accent); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem; }
-        footer { margin-top: 50px; padding: 20px; font-size: 0.8rem; color: #888; }
+        :root { --bg: #0b0e14; --card: #151b23; --accent: #2f81f7; --text: #adbac7; }
+        body { background: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; padding: 20px; text-align: center; }
+        .container { max-width: 600px; margin: 50px auto; background: var(--card); border: 1px solid #444c56; border-radius: 15px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { color: #f0f6fc; font-size: 2rem; }
+        p { color: #8b949e; line-height: 1.6; }
+        .features { text-align: left; margin: 20px 0; padding-left: 20px; }
+        .features li { margin-bottom: 10px; color: #adbac7; }
+        .btn-get { background: #238636; color: white; padding: 15px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: block; margin-top: 30px; transition: 0.3s; }
+        .btn-get:hover { background: #2ea043; }
     </style>
 </head>
 <body>
-    <nav> <div style="font-weight: bold; font-size: 1.5rem;">Aarif<span style="color:var(--accent)">Saifi</span></div> </nav>
-    <div class="hero">
-        <h1>MyToolHub</h1>
-        <p>Professional Shell & Python Tool Developer</p>
+
+    <div class="container">
+        <h1>📱 PhoneInfo Pro</h1>
+        <p>A powerful terminal-based script to gather deep system and network information of any device.</p>
+        
+        <ul class="features">
+            <li>✅ Detailed Hardware Info</li>
+            <li>✅ Network & IP Analysis</li>
+            <li>✅ Battery & System Health</li>
+            <li>✅ Fast & Lightweight</li>
+        </ul>
+
+        <a href="verify.html" class="btn-get">Get Installation Commands</a>
     </div>
-    <section>
-        <div class="tool-card">
-            <h2 style="margin-top:0">📱 PhoneInfo Pro</h2>
-            <p>Get real-time device info with one command.</p>
-            <button class="btn" onclick="goToVerify()">Get Commands</button>
-        </div>
-    </section>
-    <footer>© 2026 Aarif Saifi | Open Source Projects</footer>
-    <script>
-        function goToVerify() { window.location.href = "verify.html"; }
-    </script>
+
+    <footer style="margin-top: 40px; font-size: 0.8rem; color: #444c56;">
+        Developed by Aarif Saifi | Protected by MyToolHub
+    </footer>
+
 </body>
 </html>
