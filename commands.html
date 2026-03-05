@@ -2,56 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyToolHub - Commands</title>
+    <title>MyToolHub - Source Setup</title>
     <style>
-        body { font-family: 'Courier New', Courier, monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; }
-        .container { max-width: 800px; margin: auto; }
-        .command-box { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 15px; margin-bottom: 25px; }
-        h2 { color: #58a6ff; }
-        h3 { color: #238636; }
-        code { background: #000; color: #39ff14; padding: 10px; display: block; border-radius: 4px; overflow-x: auto; margin: 10px 0; border: 1px solid #333; }
-        button { background-color: #238636; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-        button:hover { background-color: #2ea043; }
-        .ad-space { text-align: center; margin: 15px 0; background: #1b2129; padding: 10px; font-size: 12px; color: #8b949e; border: 1px dashed #444; }
+        body { font-family: sans-serif; background-color: #f6f8fa; color: #24292f; padding: 30px; line-height: 1.6; }
+        .box { border: 1px solid #d0d7de; border-radius: 6px; padding: 20px; background: white; max-width: 750px; margin: auto; }
+        code { background: #afb8c133; padding: 4px 8px; border-radius: 4px; font-family: monospace; color: #cf222e; }
+        .cmd-block { background: #1b1f23; color: #39ff14; padding: 15px; border-radius: 6px; margin: 15px 0; overflow-x: auto; font-family: monospace; }
+        h2 { border-bottom: 2px solid #eaecef; padding-bottom: 10px; }
     </style>
 </head>
 <body>
+    <div class="box">
+        <h2>🛠️ MyToolHub: Manual Installation</h2>
+        <p>Aap niche di gayi commands ka use karke tools ko manually setup kar sakte hain:</p>
+        
+        <h3>1. Update & Python Install</h3>
+        <div class="cmd-block">pkg install python git -y</div>
 
-    <div class="container">
-        <h1>🚀 MyToolHub Commands</h1>
-        <p>Copy and paste the commands below into your terminal.</p>
-
-        <div class="ad-space">--- ADSTERRA BANNER AD (728x90) ---</div>
-
-        <div class="command-box">
-            <h3>Part 3: PhoneInfo Tool</h3>
-            <p>Gather information about any phone number.</p>
-            <code id="cmd3">pkg install python -y && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/PhoneInfo && python3 main.py</code>
-            <button onclick="copyText('#cmd3')">Copy Command</button>
+        <h3>2. Clone and Enter IP-Tracer</h3>
+        <div class="cmd-block">
+git clone https://github.com/kinh17631-star/MyToolHub<br>
+cd MyToolHub/IP-Tracer
         </div>
 
-        <div class="ad-space">--- ADSTERRA BANNER AD (320x50) ---</div>
-
-        <div class="command-box">
-            <h3>Part 4: IP-Tracer Tool</h3>
-            <p>Track Public IP, City, ISP, and Region.</p>
-            <code id="cmd4">pkg install python -y && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/IP-Tracer && python3 install.py && python3 main.py</code>
-            <button onclick="copyText('#cmd4')">Copy Command</button>
-        </div>
-
-        <div class="ad-space">--- ADSTERRA NATIVE AD / BANNER ---</div>
-
+        <h3>3. Launch Tool</h3>
+        <div class="cmd-block">python3 install.py && python3 main.py</div>
     </div>
-
-    <script>
-        function copyText(elementId) {
-            var text = document.querySelector(elementId).innerText;
-            navigator.clipboard.writeText(text).then(function() {
-                alert("Command Copied Successfully!");
-            });
-        }
-    </script>
-
 </body>
 </html>
