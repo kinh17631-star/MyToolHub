@@ -1,27 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhoneInfo Commands</title>
+    <title>MyToolHub - Commands</title>
     <style>
-        body { background: #0d1117; color: #c9d1d9; font-family: monospace; padding: 20px; }
-        .terminal { background: #000; border: 1px solid #30363d; padding: 20px; border-radius: 8px; color: #58a6ff; line-height: 1.5; word-break: break-all; }
-        .copy-btn { background: #2f81f7; color: white; border: none; padding: 12px 25px; border-radius: 6px; margin-top: 20px; cursor: pointer; font-weight: bold; }
+        body { font-family: 'Courier New', Courier, monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        .command-box { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 15px; margin-bottom: 25px; }
+        h2 { color: #58a6ff; }
+        h3 { color: #238636; }
+        code { background: #000; color: #39ff14; padding: 10px; display: block; border-radius: 4px; overflow-x: auto; margin: 10px 0; border: 1px solid #333; }
+        button { background-color: #238636; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #2ea043; }
+        .ad-space { text-align: center; margin: 15px 0; background: #1b2129; padding: 10px; font-size: 12px; color: #8b949e; border: 1px dashed #444; }
     </style>
 </head>
 <body>
-    <h2 style="color:white;">Installation Commands</h2>
-    <div class="terminal" id="cmd">
-        pkg update && pkg upgrade -y && pkg install git -y && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/phoneinfo && bash phoneinfo.sh
+
+    <div class="container">
+        <h1>🚀 MyToolHub Commands</h1>
+        <p>Copy and paste the commands below into your terminal.</p>
+
+        <div class="ad-space">--- ADSTERRA BANNER AD (728x90) ---</div>
+
+        <div class="command-box">
+            <h3>Part 3: PhoneInfo Tool</h3>
+            <p>Gather information about any phone number.</p>
+            <code id="cmd3">pkg install python -y && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/PhoneInfo && python3 main.py</code>
+            <button onclick="copyText('#cmd3')">Copy Command</button>
+        </div>
+
+        <div class="ad-space">--- ADSTERRA BANNER AD (320x50) ---</div>
+
+        <div class="command-box">
+            <h3>Part 4: IP-Tracer Tool</h3>
+            <p>Track Public IP, City, ISP, and Region.</p>
+            <code id="cmd4">pkg install python -y && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/IP-Tracer && python3 install.py && python3 main.py</code>
+            <button onclick="copyText('#cmd4')">Copy Command</button>
+        </div>
+
+        <div class="ad-space">--- ADSTERRA NATIVE AD / BANNER ---</div>
+
     </div>
-    <button class="copy-btn" onclick="copy()">Copy All Commands</button>
 
     <script>
-        function copy() {
-            let t = document.getElementById('cmd').innerText;
-            navigator.clipboard.writeText(t);
-            alert("Commands Copied! Now paste in Terminal.");
+        function copyText(elementId) {
+            var text = document.querySelector(elementId).innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Command Copied Successfully!");
+            });
         }
     </script>
+
 </body>
 </html>
